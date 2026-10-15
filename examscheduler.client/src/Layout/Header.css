@@ -1,0 +1,109 @@
+﻿/* Header layout */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #668db8;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    height: auto; /* Lasă înălțimea să se ajusteze automat */
+}
+
+/* Left Section: Site Name */
+.header-left .site-name {
+    font-size: 1.25rem; /* Folosește unități relative */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Middle Section: Search Bar */
+.header-middle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centrare orizontală */
+    align-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 30rem; /* Lățime maximă adaptabilă */
+    padding: 0.5rem; /* Spațiere consistentă */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Scalare adaptabilă */
+    box-sizing: border-box; /* Include padding și border în dimensiuni */
+}
+
+/* Right Section: Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Spațiere între icon-uri */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 1.25rem; /* Dimensiune adaptabilă */
+    cursor: pointer;
+    height: auto; /* Elimină constrângerea fixă */
+}
+
+/* Tooltip */
+.profile-icon-container {
+    position: relative;
+}
+
+.profile-tooltip {
+    position: absolute;
+    top: 100%; /* Poziționează tooltip-ul sub buton */
+    right: 0;
+    background-color: #668db8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem; /* Spațiere internă */
+    display: flex;
+    flex-direction: column; /* Elemente empilate vertical */
+    gap: 0.5rem; /* Spațiere între elemente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: auto; /* Lățime automată pentru adaptare */
+    font-size: 1rem; /* Scalare uniformă */
+}
+
+    .profile-tooltip button {
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 3px; /* Adaugă colțuri rotunjite */
+    }
+
+        .profile-tooltip button:hover {
+            background-color: #f1f1f1;
+        }
+
+/* Utility: Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header-middle {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .header-right {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}

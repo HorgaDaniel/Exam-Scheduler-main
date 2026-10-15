@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.1738743">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\Forms\NewFolder\**" />
+    <TypeScriptConfiguration Remove="src\Forms\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\Forms\NotificationSettingsForm.css" />
+    <None Remove="src\Forms\NotificationSettingsForm.jsx" />
+    <None Remove="src\Pages\NotificationSettingsPage.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Components\Calendar\" />
+    <Folder Include="src\Components\AcceptedExamsList\" />
+    <Folder Include="src\Components\DeclinedExamsList\" />
+    <Folder Include="src\Components\SpecificTable\" />
+    <Folder Include="src\Components\EditSubjects\" />
+    <Folder Include="src\Components\AddAvailability\" />
+    <Folder Include="src\Components\ManageScheduleRequests\" />
+    <Folder Include="src\Components\ProfessorManagement\" />
+    <Folder Include="src\Components\ScheduleRequest\" />
+    <Folder Include="src\Components\UserManagementTable\" />
+    <Folder Include="src\Components\ScrollableContainer\" />
+    <Folder Include="src\Components\StylizedBlock\" />
+  </ItemGroup>
+</Project>
